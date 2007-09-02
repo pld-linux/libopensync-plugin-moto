@@ -1,4 +1,5 @@
 Summary:	OpenSync plugin for syncing to a Motorola mobile phone
+Summary(pl.UTF-8):	Wtyczka do OpenSync synchronizująca z telefonami komórkowymi Motoroli
 Name:		libopensync-plugin-moto
 Version:	0.22
 Release:	1
@@ -15,6 +16,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 OpenSync Plugin for syncing with Motorola phones using the AT command
 set.
+
+%description -l pl.UTF-8
+Wtyczka do OpenSync służąca do synchronizacji z telefonami firmy
+Motorola przy użyciu zbioru poleceń AT.
 
 %prep
 %setup -q
@@ -33,4 +38,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README
 %attr(755,root,root) %{_libdir}/opensync/plugins/motosync.py
-%{_datadir}/opensync/defaults/*
+%{_datadir}/opensync/defaults/moto-sync
